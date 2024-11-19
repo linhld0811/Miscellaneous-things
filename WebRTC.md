@@ -1,10 +1,10 @@
 # WebRTC Connection Process:
-1. SDP offer: Device A sends an SDP offer, describing the media streams (the type of codec, transport protocol, 
+1. ICE Gathering: Both devices gather ICE candidates (network addresses) and exchange them to find the best network path.
+2. Connectivity Checks: Devices perform connectivity checks to determine the best route for communication, using STUN/TURN servers if needed.
+3. Peer-to-Peer Connection: Once the best network path is identified, a direct peer-to-peer connection is established for media streaming.
+4. SDP offer: Device A sends an SDP offer, describing the media streams (the type of codec, transport protocol, 
 and other related information) and connection parameters.
-2. SDP Answer: Device B responds with an SDP answer, agreeing on the media format and other parameters.
-3. ICE Gathering: Both devices gather ICE candidates (network addresses) and exchange them to find the best network path.
-4. Connectivity Checks: Devices perform connectivity checks to determine the best route for communication, using STUN/TURN servers if needed.
-5. Peer-to-Peer Connection: Once the best network path is identified, a direct peer-to-peer connection is established for media streaming.
+5. SDP Answer: Device B responds with an SDP answer, agreeing on the media format and other parameters.
 # References:
 1. **ICE Protocol** (Interactive Connectivity Establishment protocol): establish connections between devices over the Internet
   - ICE helps WebRTC traverse NATs and firewalls by allowing devices to find and use the most efficient network path between them, regardless of how the network is configured.

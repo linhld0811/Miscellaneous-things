@@ -14,12 +14,12 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-xx.x/lib64
 ```
 export PYTHONPATH=\path\to\python_code
 ```
-5. Torch cache: Path to save pre-trained models from torchvision/torch <br>
+4. Torch cache: Path to save pre-trained models from torchvision/torch <br>
 ```
 export TORCH_HOME=\path\to\cache_dir
 ```
 &rarr; save to `$TORCH_HOME/hub` <br>
-6. Huggingface cache: Path to save pre-trained models from huggingface <br>
+5. Huggingface cache: Path to save pre-trained models from huggingface <br>
 ```
 export HUGGINGFACE_HUB_CACHE=\path\to\cache_dir
 ```

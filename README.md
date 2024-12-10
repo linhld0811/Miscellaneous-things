@@ -66,6 +66,7 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 6. Resample audio: `ffmpeg -v 8 -i <input.wav> -ac 1 -ar $sr -f wav -acodec pcm_s16le <output.wav>`
 7. Extract all frames of videos: `ffmpeg -loglevel error -y -i <input.mp4> -vf fps=25 -qmin 1 -q:v 1 -start_number 0 <image%d.png>`
 8. Extract audio from video: `ffmpeg -loglevel error -y -i <input.mp4> -strict -2 <output.wav>`
+9. Extract segment audio/video: `ffmpeg -loglevel error -y -i inputFile -vcodec copy -acodec copy -ss hh:mm:ss -to hh:mm:ss outputFile`
 ## AWK
 1. FNR: number of records
 2. NR: number of records variable

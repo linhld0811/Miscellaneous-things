@@ -24,6 +24,7 @@ services:
     network_mode: host
     restart: always
     command: tail -F anything
+    entrypoint: tail -F anything # overwrite entrypoint command in Dockerfile
     working_dir: /directory/path
     depends_on:
       - <name_other_service> # run before and stop after

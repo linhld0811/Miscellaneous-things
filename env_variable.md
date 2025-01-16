@@ -23,6 +23,10 @@ export TORCH_HOME=\path\to\cache_dir
 ```
 export HUGGINGFACE_HUB_CACHE=\path\to\cache_dir
 ```
+6. Set num threads pytorch: <br>
+```
+export OMP_NUM_THREADS=N
+```
 ## GOLANG
 1. Debug grpc call <br>
 ```

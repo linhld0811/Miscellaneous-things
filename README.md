@@ -83,6 +83,9 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 3. Visual: <br />
 `nvprof -o prof.nvvp python train_mnist.py` <br />
 `nvvp prof.nvvp` <br />
+## Jetson
+1. Check jetpack version: `sudo apt-cache show nvidia-jetpack` <br />
+2. 
 ## Cmake
 1. cuda toolkit: `-DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-xx.x`
 2. python path:

@@ -25,6 +25,7 @@ Load image: tar -cC 'target_dir' . | docker load
 Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 ```
 3. [Dockerfile](https://docs.docker.com/reference/dockerfile/)
+4. Run docker without sudo: `sudo setfacl -m user:$USER:rw /var/run/docker.sock`
 ## Git
 ### [Cheatsheet](https://www.freecodecamp.org/news/git-cheat-sheet/)
 1. Add the Remote Repository: ```git remote add origin <remote_url>```

@@ -14,7 +14,12 @@
 ```
 7. Check ghost-processes left behind nvidia-smi: 
 ```fuser -v /dev/nvidia*```
-8. 
+8. Rename file to replace `space` to `underscore`: <br />
+```
+for f in *\ *; do mv "$f" "${f// /_}"; done
+or 
+rename 's/ /_/g' *
+```
 ## Docker
 1. Remove container not running: <br />
 ```docker rm $(docker ps -a -f "status=exited" -q)```

@@ -61,6 +61,7 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 4. Convert value of key to string: `jq -r '(.start|tostring) + "\t" + (.end|tostring)`
 5. Get all keys: `jq 'keys'`
 6. Get length of list: `jq length`
+7. Filter: `jq 'select(.key == "value")`
 ## FFMPEG
 1. Download best video & best audio: <br />
 `yt-dlp --no-check-certificates  -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" <yt_link>`

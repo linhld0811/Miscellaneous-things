@@ -58,10 +58,10 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 1. List all values by keys: `jq '.key'` or `jq '.key[]'` (if input is list of json)
 2. Get multiple values by multiple keys: `jq '.key[]|{key1, key2}'` (return dict) or `jq '.key[]|"\(.key1) \(.key2)"'` or <br /> `jq '.key[]|.key1 + " " + .key2'`
 3. Split value by key and get second_part: `jq '.key = (.key|split("--")|.[1])'`
-4. Convert value of key to string: `jq -r '(.start|tostring) + "\t" + (.end|tostring)`
+4. Convert value of key to string: `jq -r '(.start|tostring) + "\t" + (.end|tostring)'`
 5. Get all keys: `jq 'keys'`
 6. Get length of list: `jq length`
-7. Filter: `jq 'select(.key == "value")`
+7. Filter: `jq 'select(.key == "value")'`
 ## FFMPEG
 1. Download best video & best audio: <br />
 `yt-dlp --no-check-certificates  -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" <yt_link>`

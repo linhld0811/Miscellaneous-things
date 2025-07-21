@@ -53,7 +53,14 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
     - Get list configmap name: ```kubectl get configmaps```
     - Get specific configmap: ```kubectl get configmaps <configmap_name> -o yaml > <configmap.yaml>```
 11. Create configmap: ```kubectl create -f <configmap.yaml>```
-12. 
+
+## Python/IPython
+1. Autoreload:
+```
+%load_ext autoreload
+%autoreload 2
+```
+2. 
 ## JQ - JSON Parsing
 1. List all values by keys: `jq '.key'` or `jq '.key[]'` (if input is list of json)
 2. Get multiple values by multiple keys: `jq '.key[]|{key1, key2}'` (return dict) or `jq '.key[]|"\(.key1) \(.key2)"'` or <br /> `jq '.key[]|.key1 + " " + .key2'`

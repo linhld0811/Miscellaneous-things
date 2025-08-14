@@ -20,6 +20,11 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 or 
 rename 's/ /_/g' *
 ```
+9. Delete first line in file:
+```
+sed -i '{i}d' <file>
+```
+10. 
 ## Docker
 1. Remove container not running: <br />
 ```docker rm $(docker ps -a -f "status=exited" -q)```

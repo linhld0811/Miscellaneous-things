@@ -20,7 +20,7 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 or 
 rename 's/ /_/g' *
 ```
-9. Delete first line in file:
+9. Delete line i in file:
 ```
 sed -i '{i}d' <file>
 ```
